@@ -1,0 +1,122 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
+@import url('https://rsms.me/inter/inter.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 33% 98%;
+    --foreground: 240 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 15%;
+
+    --primary: 260 76% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 5% 95%;
+    --secondary-foreground: 240 10% 15%;
+
+    --muted: 240 5% 92%;
+    --muted-foreground: 240 4% 40%;
+
+    --accent: 216 70% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 85%;
+    --ring: 260 76% 52%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 260 76% 52%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 260 76% 52%;
+    --sidebar-accent: 264 100% 94%;
+    --sidebar-accent-foreground: 260 76% 52%;
+    --sidebar-border: 264 100% 85%;
+    --sidebar-ring: 260 76% 52%;
+  }
+
+  .dark {
+    --background: 240 15% 10%;
+    --foreground: 240 10% 95%;
+
+    --card: 240 10% 13%;
+    --card-foreground: 240 10% 95%;
+
+    --popover: 240 10% 13%;
+    --popover-foreground: 240 10% 95%;
+
+    --primary: 260 76% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 6% 18%;
+    --secondary-foreground: 240 10% 95%;
+
+    --muted: 240 6% 18%;
+    --muted-foreground: 240 10% 65%;
+
+    --accent: 216 70% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 240 10% 95%;
+
+    --border: 240 6% 24%;
+    --input: 240 6% 24%;
+    --ring: 260 84% 60%;
+    
+    --sidebar-background: 240 10% 13%;
+    --sidebar-foreground: 240 10% 95%;
+    --sidebar-primary: 260 76% 52%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 6% 18%;
+    --sidebar-accent-foreground: 240 10% 95%;
+    --sidebar-border: 240 6% 24%;
+    --sidebar-ring: 260 84% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-muted-foreground/30 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground/50;
+}
